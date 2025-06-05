@@ -33,8 +33,8 @@ def run_prox_pulse(apds: ProximitySensor, pixels: LEDController) -> NoReturn:
     # Main loop
     while True:
         if apds.proximity >= THRESHOLD:
-            pulse(pixels, RED)
+            pulse(pixels, RED, 0.3)
             # prox_pulse(pixels, RED, apds.proximity)
         else: 
-            pulse(pixels, GREEN)
+            pulse(pixels, GREEN, 0.3)
             # prox_pulse(pixels, GREEN, apds.proximity)
